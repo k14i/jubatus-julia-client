@@ -70,30 +70,39 @@ type ClientBase
   end
 
   function get_client(self::ClientBase)
+    return self.client
   end
 
   function get_name(self::ClientBase)
+    return self.client.name
   end
 
-  function set_name(self::ClientBase)
+  function set_name(self::ClientBase, name::String)
+    self.client.name = name
   end
 
-  function save(self::ClientBase)
+  function save(self::ClientBase, id::Int)
+    #return self.client.call("save", [id], TBool(), [TString()])
   end
 
-  function load(self::ClientBase)
+  function load(self::ClientBase, id::Int)
+    #return self.client.call("load", [id], TBool(), [TString()])
   end
 
   function do_mix(self::ClientBase)
+    #return self.client.call("do_mix", [], TBool(), [])
   end
 
   function get_config(self::ClientBase)
+    #return self.client.call("get_config", [], TString(), [])
   end
 
   function get_status(self::ClientBase)
+    #return self.client.call("get_status", [], TMap(TString(), TMap(TString(), TString())), [])
   end
 
   function get_proxy_status(self::ClientBase)
+    #return self.client.call("get_proxy_status", [], TMap(TString(), TMap(TString(), TString())), [])
   end
 
 end
