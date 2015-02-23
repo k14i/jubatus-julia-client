@@ -66,7 +66,10 @@ type ClientBase
     this
   end
 
-  function init(self::ClientBase, h::Host)
+  function init(self::ClientBase, host::Host)
+    # address = msgpackrpc.Address(host.ip, host.port)
+    # self.client = msgpackrpc.Client(address, host.timeout)
+    # self.jubatus_client = Client(self.client, self.client.name)
   end
 
   function get_client(self::ClientBase)
