@@ -24,10 +24,19 @@ end
 type Client
   name::String
 
-  function Client(name)
+  function Client(name::String)
     this = new()
     this.name = name
     this
+  end
+
+  function init(self::Client)
+    # self.client = client
+    # self.name = name
+  end
+
+  function call(self::Client, m::Method)
+    # ToDo: Implement some msgpack features.
   end
 
 end
@@ -47,12 +56,6 @@ type Host
     this.name = name
     this.timeout = timeout
     this
-  end
-
-  function init(self::Client)
-  end
-
-  function call(self::Client, m::Method)
   end
 
 end
