@@ -37,6 +37,10 @@ type Client
 
   function call(self::Client, m::Method)
     # ToDo: Implement some msgpack features.
+    if length(m.args) != length(m.args_type)
+    end
+
+    values = [self.name]
   end
 
 end
