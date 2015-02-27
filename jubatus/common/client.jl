@@ -40,7 +40,15 @@ type Client
     if length(m.args) != length(m.args_type)
     end
 
+    target = Dict()
+    for i = 1:length(m.args)
+      merge!(target, Dict(m.args[i] => m.args_type[i]))
+    end
     values = [self.name]
+    for (v, t) in target
+      # append(values, to_msgpack(t,v))
+    end
+    # ToDo: Implement some msgpack features.
   end
 
 end
