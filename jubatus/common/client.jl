@@ -48,7 +48,14 @@ type Client
     for (v, t) in target
       # append(values, to_msgpack(t,v))
     end
-    # ToDo: Implement some msgpack features.
+
+    # future = self.client.call_async(m, values)
+    # future.attach_error_handler(error_handler)
+    # ret = future.get()
+
+    # if m.ret_type != nothing
+    #   return m.ret_type.from_msgpack(ret)
+    # end
   end
 
 end
