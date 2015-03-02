@@ -1,3 +1,5 @@
+using MsgPack
+
 module client
 
 type Method
